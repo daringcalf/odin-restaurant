@@ -26,9 +26,10 @@ Run `npm install && npx webpack serve` or go to [github page](https://daringcalf
 
 To deploy to GitHub Pages:
 
-1. First time: `git switch -c gh-pages`
+1. First time: `git switch -c gh-pages`  
    Subsequent times: `git switch gh-pages`
-2. `npx webpack` to build
-3. `git add dist -f && git commit -m "Deployment commit"`
-4. `git subtree push --prefix dist origin gh-pages`
-5. `git checkout main`
+2. `git merge main --no-edit` to update `gh-pages` with latest changes from `main`
+3. `npm run build` to build
+4. `git add dist -f && git commit -m "Deployment commit"`
+5. `npm run deploy` to push to GitHub Pages
+6. `git switch main` to return to main branch
