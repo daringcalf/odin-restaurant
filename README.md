@@ -21,3 +21,14 @@ This project demonstrates JavaScript module organization and DOM manipulation by
 ## Usage
 
 Run `npm install && npx webpack serve` or go to [github page](https://daringcalf.github.io/odin-restaurant/) to view the restaurant.
+
+## Deployment
+
+To deploy to GitHub Pages:
+
+1. First time: `git switch -c gh-pages`
+   Subsequent times: `git switch gh-pages`
+2. `npx webpack` to build
+3. `git add dist -f && git commit -m "Deployment commit"`
+4. `git subtree push --prefix dist origin gh-pages`
+5. `git checkout main`
